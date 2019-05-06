@@ -14,6 +14,13 @@
   </header>
 
   <p class="entry-summary">{{ .Summary | plainify | htmlUnescape }}</p>
+  {{ with .Params.tags }}
+    <ul id="entry-tags">
+	  {{ range . }}
+	    <li class="entry-tag"> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+	  {{ end }}
+    </ul>
+  {{ end }}
   <footer class="entry-footer">
     <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     <div class="sharing">
