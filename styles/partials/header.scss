@@ -76,7 +76,7 @@
   }
 
   &-item {
-    padding: 1rem 0;
+    padding: 0 0 1em 0;
 
     a {
       font-weight: $weight-light;
@@ -91,7 +91,7 @@
 
     &.is-active {
       a {
-        color: $grey-dark;
+        color: $grey-light;
         opacity: 1;
         font-weight: bold;
       }
