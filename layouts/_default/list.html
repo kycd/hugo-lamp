@@ -15,6 +15,9 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
   <section class="main entry-list">
+    {{ if eq .Data.Singular "tag" }}
+      <h2>Tag: {{ .Data.Term }}</h2>
+    {{ end }}
     <header class="list-header">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
