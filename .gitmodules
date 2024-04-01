@@ -1,0 +1,2 @@
+[submodule "themes/hugo-lamp"]
+	url = git@github.com:kycd/hugo-lamp
